@@ -9,7 +9,7 @@ body{
    background:  linear-gradient(217deg, rgba(255,0,0,.8), rgba(255,0,0,0) 70.71%),
     linear-gradient(127deg, rgba(24, 2, 2, 0.945), rgba(0,255,0,0) 70.71%),
     linear-gradient(336deg, rgba(0,0,255,.8), rgba(0,0,255,0) 70.71%) ;
-    height: 94vh;
+    height: 100vh;
 
 }
 .limite-largura{
@@ -30,11 +30,13 @@ header{
     margin: 20px;
     padding: 10px ;
     font-size: 20px;
+    color: white;
 }
 
 .logo img{
     width: 100px;
     margin:  20px;
+    opacity: 0.35;
     
 }
 /*Conteudo pagina*/
@@ -48,27 +50,13 @@ header{
     flex-direction: column;
     padding: 30px 0px;
     color: white;
+   
 }
 .flex{
     display: flex;
     
 }
-.imagem{
-    width: 100%;
-    height: 100%;
-    z-index: 1;
-    opacity: 0.4;
-    margin-left:120px;
-    margin-top: -102px;
-    
-}
-.imagem img{
-    opacity: 0.5;
-    height: 43vh;
-    width: 20vw;
-   
-    
-}
+
 
 /*Adicionando background img*/
 .limite-largura{
@@ -76,6 +64,8 @@ header{
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
+    max-width: 1280px;
+    margin: 0 auto;
 }
 
 /*fontes do conteudo*/
@@ -128,3 +118,64 @@ button:hover{
    
 }
 
+/*Adicionando Meida queries*/
+
+@media screen and (min-width:420px) and (max-width:768px) {
+    .limite-largura{
+           
+    width: 100%;
+    height: 100vh;
+    margin-top: auto;
+    }
+    .conteudo{
+    gap: 50px; 
+    }
+    .conteudo .fonte{
+        font-size: 64px;
+    }
+    h1{
+    
+        font-weight: 100;
+        font-size: 50px;
+        font-family: Arial, Helvetica, sans-serif;
+    }
+}
+ 
+@media screen and (min-width:280px) and (max-width:420px) {
+    .limite-largura{
+           
+    width: 100%;
+    height: 100vh;
+    margin: 0 auto;
+    }
+    .conteudo{
+    gap: 45px; 
+    }
+    .conteudo .fonte{
+        font-size: 36px;
+    }
+    .conteudo h6{
+        font-size: 10px;
+        letter-spacing: 5px;
+    }
+    h1{
+        font-size: 26px;
+    }
+    .botao{
+        width: 50%;
+    }
+}
+
+
+@media screen and (min-width:1280px) and (max-width:4000px) {
+    .limite-largura{
+       
+    width: 95%;
+    height: 90vh;
+    margin: 30px auto;
+    }
+    .conteudo{
+    gap: 45px; 
+    }
+}
+    
